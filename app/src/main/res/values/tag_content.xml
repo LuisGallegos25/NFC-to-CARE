@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tagContentType">
+        <item>Enlace URL</item>
+        <item>Llamada</item>
+        <item>Texto Info</item>
+        <item>Localizacion</item>
+    </string-array>
+
+</resources>

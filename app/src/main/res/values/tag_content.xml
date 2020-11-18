@@ -2,9 +2,11 @@
 <resources>
     <string-array name="tagContentType">
         <item>Enlace URL</item>
-        <item>Llamada</item>
-        <item>Texto Info</item>
-        <item>Localizacion</item>
+        <item>Llamada telefonica</item>
+        <item>Texto de Informacion</item>
+        <item>Localizacion GPS</item>
+        <item>Reproducir video</item>
+        <item>Reproducir Audio</item>
     </string-array>
 
 </resources>

@@ -115,6 +115,20 @@ public class NFCManager {
         return new NdefMessage(new NdefRecord[]{geoUriRecord});
     }
 
+    public static class NFCNotSupported extends Exception {
+        public NFCNotSupported() {
+            super();
+        }
+    }
+
+    public static class NFCNotEnabled extends Exception {
+        public NFCNotEnabled() {
+            super();
+        }
+    }
+
+}
+
 
 
 }

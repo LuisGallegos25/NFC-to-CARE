@@ -52,4 +52,32 @@ public class NFCManager {
 
         nfcAdpt.disableForegroundDispatch(activity);
     }
+
+    public void writeTag(Tag tag, NdefMessage message)  {
+        if (tag != null) {
+            try {
+                Ndef ndefTag = Ndef.get(tag);
+
+                if (ndefTag == null) {
+                    // Let's try to format the Tag in NDEF
+                    NdefFormatable nForm = NdefFormatable.get(tag);
+                    if (nForm != null) {
+                        nForm.connect();
+                        nForm.format(message);
+                        nForm.close();
+                    }
+                }
+                else {
+                    ndefTag.connect();
+                    ndefTag.writeNdefMessage(message);
+                    ndefTag.close();
+                }
+            }
+            catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
 }

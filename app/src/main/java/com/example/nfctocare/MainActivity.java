@@ -9,6 +9,9 @@ package com.example.nfctocare;
  * 18/11/2020
  */
 
+import android.app.ProgressDialog;
+import android.nfc.NdefMessage;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +26,9 @@ import android.widget.Spinner;
 public class MainActivity extends AppCompatActivity {
 
     private View v;
+    private NdefMessage message = null;
+    private ProgressDialog dialog;
+    Tag currentTag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        nfcMger = new NFCManager(this);
         v = findViewById(R.id.mainLyt);
 
         final Spinner sp = (Spinner) findViewById(R.id.tagType);
@@ -46,6 +53,28 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int pos = sp.getSelectedItemPosition();
                 String content = et.getText().toString();
+
+                switch (pos) {
+                    case 0:
+                        message =  nfcMger.createUriMessage(content, "http://");
+                        break;
+                    case 1:
+                        message =  nfcMger.createUriMessage(content, "tel:");
+                        break;
+                    case 2:
+                        message =  nfcMger.createTextMessage(content);
+                        break;
+                    case 3:
+                        message =  nfcMger.createGeoMessage();
+                        break;
+                }
+
+                if (message != null) {
+
+                    dialog = new ProgressDialog(MainActivity.this);
+                    dialog.setMessage("Acerque la etiqueta por favor");
+                    dialog.show();;
+                }
 
             }
         });

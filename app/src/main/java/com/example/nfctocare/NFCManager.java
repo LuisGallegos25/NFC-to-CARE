@@ -17,7 +17,7 @@ import java.util.Locale;
 
 public class NFCManager {
 
-    private Activity activiy;
+    private Activity activity;
     private NfcAdapter nfcAdpt;
 
     public NFCManager(Activity activity) {
@@ -127,8 +127,9 @@ public class NFCManager {
         }
     }
 
-}
-
-
 
 }
+
+
+
+

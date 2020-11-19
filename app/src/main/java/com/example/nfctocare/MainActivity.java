@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private NdefMessage message = null;
     private ProgressDialog dialog;
     Tag currentTag;
+    private NFCManager nfcMger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,5 +132,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        nfcMger.disableDispatch();
+    }
+
+
 
 }

@@ -36,4 +36,20 @@ public class NFCManager {
             throw new NFCNotEnabled();
 
     }
+
+    public void enableDispatch() {
+        Intent nfcIntent = new Intent(activity, getClass());
+        nfcIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(activity, 0, nfcIntent, 0);
+        IntentFilter[] intentFiltersArray = new IntentFilter[] {};
+        String[][] techList = new String[][] { { android.nfc.tech.Ndef.class.getName() }, { android.nfc.tech.NdefFormatable.class.getName() } };
+
+
+        nfcAdpt.enableForegroundDispatch(activity, pendingIntent, intentFiltersArray, techList);
+    }
+
+    public void disableDispatch() {
+
+        nfcAdpt.disableForegroundDispatch(activity);
+    }
 }

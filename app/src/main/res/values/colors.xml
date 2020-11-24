@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<color name="colorPrimary">#009688</color>
+    <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#014C45</color>-->
     <color name="colorPrimaryLight">#F0F4C3</color>
     <!--<color name="colorAccent">#FFC107</color>-->
@@ -9,12 +9,14 @@
     <color name="icons">#212121</color>
     <color name="divider">#B6B6B6</color>
 
-    <color name="colorPrimary">#FFC107</color>
-    <color name="colorPrimaryDark">#FFA000</color>
+
+
     <color name="backgroundcolor">#fcfcfc</color>
     <color name="lightgray">#ededed</color>
     <color name="deeppurple">#7c4dff</color>
     <color name="yello">#ffb300</color>
+    <color name="orange">#F44336</color>
+    <color name="sky_blue">#00BCD4</color>
     <color name="green">#00bfa5</color>
     <color name="colorAccent">#FF4081</color>
     <color name="darkblue">#23283a</color>

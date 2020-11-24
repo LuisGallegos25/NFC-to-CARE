@@ -1,0 +1,13 @@
+[33m09927ab[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m onNewIntent method, which will be activated every time the device finds an NFC tag nearby and records the message on it.
+[33m95a218f[m Block notifications when the app is inactive.
+[33me7d136c[m It checks if NFC was available on the device and allows the app to notify if there is a tag nearby.
+[33mb7764a4[m Initialize NFCManager class and create method to write to label depending on which option from the drop-down list is chosen
+[33m1295c65[m method of mentioning non-typical errors that the user will see if NFC is not available
+[33m39b381b[m method to create record type text, link, phone number. and coordinates
+[33m276991c[m method of recording the data on the NFC tag
+[33ma2bb147[m method to enable and disable notifications NFC notifications
+[33m81d81e1[m actualizacion del archivo gitignore
+[33m82fc786[m method to check if NFC is available on a device. and import of libraries
+[33m2d25f88[m Creation of a class that is responsible for working with NFC
+[33mfe75be6[m Permissions to use NFC and filtering for hardware requirements
+[33mf86d8ae[m project creation and interface with dropdown list

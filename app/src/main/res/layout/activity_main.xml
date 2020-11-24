@@ -63,6 +63,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/cLabel1" />
 
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendMessage"
+            android:text="Button" />
+
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton

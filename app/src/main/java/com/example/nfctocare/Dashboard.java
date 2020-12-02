@@ -15,9 +15,15 @@ public class Dashboard extends AppCompatActivity{
 
 
     }
+
+
     /** Called when the user taps the Send button */
-    public void volver(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void call(View view) {
+        Intent intent = new Intent(this, Call.class);
+        startActivity(intent);
+    }
+    public void video(View view) {
+        Intent intent = new Intent(this, Video.class);
         startActivity(intent);
     }
 }

@@ -29,7 +29,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+public class Call extends AppCompatActivity {
 
     private View v;
     private NdefMessage message = null;
@@ -40,17 +40,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.call);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         nfcMger = new NFCManager(this);
         v = findViewById(R.id.mainLyt);
-
-        final Spinner sp = (Spinner) findViewById(R.id.tagType);
-        ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.tagContentType, android.R.layout.simple_spinner_dropdown_item);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp.setAdapter(aa);
 
         final EditText et = (EditText) findViewById(R.id.content);
 
@@ -58,27 +53,12 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int pos = sp.getSelectedItemPosition();
                 String content = et.getText().toString();
 
-                switch (pos) {
-                    case 0:
-                        message =  nfcMger.createUriMessage(content, "http://");
-                        break;
-                    case 1:
-                        message =  nfcMger.createUriMessage(content, "tel:");
-                        break;
-                    case 2:
-                        message =  nfcMger.createTextMessage(content);
-                        break;
-                    case 3:
-                        message =  nfcMger.createGeoMessage();
-                        break;
-                }
+                message =  nfcMger.createUriMessage(content, "tel:");
 
                 if (message != null) {
-
-                    dialog = new ProgressDialog(MainActivity.this);
+                    dialog = new ProgressDialog(Call.this);
                     dialog.setMessage("Acerque la etiqueta por favor");
                     dialog.show();;
                 }
@@ -86,11 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-    /** Called when the user taps the Send button */
-    public void sendMessage(View view) {
-        Intent intent = new Intent(this, Dashboard.class);
-        startActivity(intent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -130,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
             nfcAdpt.enableForegroundDispatch(this, pendingIntent, intentFiltersArray, techList);
         }
         catch(NFCManager.NFCNotSupported nfcnsup) {
-            Snackbar.make(v, "NFC not supported", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "NFC no soportado", Snackbar.LENGTH_LONG).show();
         }
         catch(NFCManager.NFCNotEnabled nfcnEn) {
-            Snackbar.make(v, "NFC Not enabled", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "NFC no activado", Snackbar.LENGTH_LONG).show();
         }
 
     }

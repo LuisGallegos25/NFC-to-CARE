@@ -55,6 +55,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:onClick="url"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_margin="10dp">
@@ -94,6 +95,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:onClick="inf_text"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_margin="10dp">
@@ -238,11 +240,4 @@
 
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/boton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="volver" />
 </LinearLayout>

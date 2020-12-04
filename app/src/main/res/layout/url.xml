@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:hint="Ingresar url"
-            android:inputType="phone"
+            android:inputType="textCapSentences|textAutoCorrect"/>
             android:lines="3"
             android:maxLines="4" />
 

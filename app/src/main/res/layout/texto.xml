@@ -54,7 +54,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="94dp"
                 android:layout_weight="1"
-                android:inputType="phone"
                 android:lines="1"
                 android:maxLines="1"
                 android:textSize="19dp"
@@ -119,7 +118,6 @@
             android:inputType="textCapSentences|textAutoCorrect"
             android:lines="3"
             android:maxLines="4" />
-
 
         <TextView
             android:id="@+id/editTextTextPersonName3"

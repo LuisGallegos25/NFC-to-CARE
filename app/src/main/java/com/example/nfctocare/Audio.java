@@ -36,7 +36,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Video extends AppCompatActivity {
+public class Audio extends AppCompatActivity {
 
 
     private View v;
@@ -51,7 +51,7 @@ public class Video extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.video);
+        setContentView(R.layout.audio);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -69,7 +69,7 @@ public class Video extends AppCompatActivity {
                 message =  nfcMger.createUriMessage(content, "file:/");
 
                 if (message != null) {
-                    dialog = new ProgressDialog(Video.this);
+                    dialog = new ProgressDialog(Audio.this);
                     dialog.setMessage("Acerque la etiqueta por favor");
                     dialog.show();;
                 }
@@ -89,7 +89,7 @@ public class Video extends AppCompatActivity {
 
         //Toast.makeText(getApplicationContext(),"hola",Toast.LENGTH_LONG).show();
         myFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        myFileIntent.setType("video/*");
+        myFileIntent.setType("audio/*");
         startActivityForResult(myFileIntent, 10);
 
     }
@@ -114,7 +114,7 @@ public class Video extends AppCompatActivity {
 
 
         }
-     }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

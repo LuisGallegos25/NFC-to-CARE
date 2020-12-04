@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.nfctocare.Url">
+    tools:context="com.example.nfctocare.Gps">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -40,28 +40,28 @@
             android:ems="15"
             android:inputType="textPersonName"
             android:textSize="23dp"
-            android:text="Agregar Enlace URL" />
+            android:text="Agregar ubicacion de lugar" />
 
         <EditText
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:hint="Ingrese nombre del contenido"
+            android:hint="Ingrese el nombre de la ubicacion"
             android:lines="3"
             android:maxLines="4"
             android:inputType="textCapSentences|textAutoCorrect"/>
 
 
-        <EditText
-            android:id="@+id/content"
+        <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:hint="Ingresar url"
-            android:inputType="phone"
-            android:lines="3"
-            android:maxLines="4" />
+            android:hint="Presione el boton para obtener y guardar la ubicacion"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal" />
 
 
     </RelativeLayout>

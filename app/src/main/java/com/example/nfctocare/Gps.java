@@ -9,18 +9,14 @@ package com.example.nfctocare;
  * 18/11/2020
  */
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.database.Cursor;
-import android.net.Uri;
 import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -30,46 +26,36 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class Video extends AppCompatActivity {
-
+public class Gps extends AppCompatActivity {
 
     private View v;
     private NdefMessage message = null;
     private ProgressDialog dialog;
     Tag currentTag;
     private NFCManager nfcMger;
-    EditText txt_pathShow;
-    Button btn_video,btn;
-    Intent myFileIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.video);
+        setContentView(R.layout.gps);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         nfcMger = new NFCManager(this);
         v = findViewById(R.id.mainLyt);
 
-        final EditText et = (EditText) findViewById(R.id.content);
-
         FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.fab);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String content = et.getText().toString();
 
-                message =  nfcMger.createUriMessage(content, "file:/");
+                message =  nfcMger.createGeoMessage();
 
                 if (message != null) {
-                    dialog = new ProgressDialog(Video.this);
+                    dialog = new ProgressDialog(Gps.this);
                     dialog.setMessage("Acerque la etiqueta por favor");
                     dialog.show();;
                 }
@@ -77,45 +63,7 @@ public class Video extends AppCompatActivity {
             }
         });
 
-        txt_pathShow = (EditText) findViewById(R.id.content);
-
-
-
-
     }
-
-
-    public void videosave(View view) {
-
-        //Toast.makeText(getApplicationContext(),"hola",Toast.LENGTH_LONG).show();
-        myFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        myFileIntent.setType("video/*");
-        startActivityForResult(myFileIntent, 10);
-
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 10 && resultCode == RESULT_OK && null != data) {
-            Uri selectedImage = data.getData();
-            String[] filePathColumn = { MediaStore.Images.Media.DATA };
-
-            Cursor cursor = getContentResolver().query(selectedImage,filePathColumn, null, null, null);
-            cursor.moveToFirst();
-
-            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-            String picturePath = cursor.getString(columnIndex);
-
-            cursor.close();
-            txt_pathShow.setText(picturePath);
-
-
-        }
-     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -184,5 +132,7 @@ public class Video extends AppCompatActivity {
 
         }
     }
+
+
 
 }

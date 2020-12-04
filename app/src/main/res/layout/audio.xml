@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.nfctocare.Url">
+    tools:context="com.example.nfctocare.Audio">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -34,34 +34,34 @@
 
 
         <TextView
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="15"
+            android:ems="50"
             android:inputType="textPersonName"
-            android:textSize="23dp"
-            android:text="Agregar Enlace URL" />
-
-        <EditText
-            android:id="@+id/nombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:hint="Ingrese nombre del contenido"
-            android:lines="3"
-            android:maxLines="4"
-            android:inputType="textCapSentences|textAutoCorrect"/>
+            android:text="Seleccionar audio"
+            android:textSize="23dp"/>
 
 
         <EditText
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:hint="Ingresar url"
+            android:layout_marginTop="56dp"
+            android:hint="Ruta del audio"
             android:inputType="phone"
             android:lines="3"
             android:maxLines="4" />
+        <Button
+            android:id="@+id/btn_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="115dp"
+            android:layout_centerHorizontal="true"
+            android:text="Buscar"
+            android:onClick="audio"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/backgroundcolor" />
 
 
     </RelativeLayout>

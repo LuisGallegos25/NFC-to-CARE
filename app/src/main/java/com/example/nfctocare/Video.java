@@ -9,7 +9,6 @@ package com.example.nfctocare;
  * 18/11/2020
  */
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -29,12 +28,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class Video extends AppCompatActivity {
 
@@ -66,7 +61,7 @@ public class Video extends AppCompatActivity {
             public void onClick(View v) {
                 String content = et.getText().toString();
 
-                message =  nfcMger.createUriMessage(content, "file:/");
+                message =  nfcMger.createUriMessage(content, "file://");
 
                 if (message != null) {
                     dialog = new ProgressDialog(Video.this);

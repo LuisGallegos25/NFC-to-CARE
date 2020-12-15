@@ -31,9 +31,16 @@ public class Dashboard extends AppCompatActivity{
         startActivity(intent);
     }
 
-
     public void video(View view) {
         Intent intent = new Intent(this, Video.class);
+        startActivity(intent);
+    }
+    public void gps(View view) {
+        Intent intent = new Intent(this, Gps.class);
+        startActivity(intent);
+    }
+    public void audio(View view) {
+        Intent intent = new Intent(this, Audio.class);
         startActivity(intent);
     }
 }

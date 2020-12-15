@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NFC to CARE</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_user">Perfil</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="action_acerca_de">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
 </resources>

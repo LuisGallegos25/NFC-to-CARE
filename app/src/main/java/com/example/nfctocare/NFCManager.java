@@ -10,7 +10,6 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.Ndef;
 import android.nfc.tech.NdefFormatable;
-import android.support.design.widget.Snackbar;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Locale;

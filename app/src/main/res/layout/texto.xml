@@ -35,6 +35,8 @@
 
         <EditText
             android:id="@+id/nombres"
+            android:background="@drawable/style_edit_text"
+            style="@android:style/Widget.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
@@ -50,9 +52,10 @@
 
             <TextView
                 android:id="@+id/generosel"
+                android:background="@drawable/style_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="94dp"
+                android:layout_marginTop="100dp"
                 android:layout_weight="1"
                 android:lines="1"
                 android:maxLines="1"
@@ -61,15 +64,16 @@
 
             <EditText
                 android:id="@+id/edad"
+                android:background="@drawable/style_edit_text"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
+                android:gravity="center_horizontal"
                 android:hint="Edad"
-                android:textAlignment="center"
                 android:inputType="phone"
                 android:lines="3"
                 android:maxLines="4"
-                android:gravity="center_horizontal" />
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -78,12 +82,13 @@
             android:layout_width="250dp"
             android:prompt="@string/select"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="110dp"
             android:lines="3"
             android:maxLines="4"/>
 
         <EditText
             android:id="@+id/telefono"
+            android:background="@drawable/style_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="164dp"
@@ -93,6 +98,7 @@
             android:maxLines="4" />
         <EditText
             android:id="@+id/direccion"
+            android:background="@drawable/style_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="228dp"
@@ -102,6 +108,7 @@
             android:maxLines="4" />
         <EditText
             android:id="@+id/cedula"
+            android:background="@drawable/style_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="292dp"
@@ -109,11 +116,34 @@
             android:inputType="phone"
             android:lines="3"
             android:maxLines="4" />
+
+        <EditText
+            android:id="@+id/tipoSangre"
+            android:background="@drawable/style_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="356dp"
+            android:hint="Tipo de sangre"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:lines="3"
+            android:maxLines="4" />
+        <EditText
+            android:id="@+id/alergias"
+            android:background="@drawable/style_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:hint="Alergias"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:lines="3"
+            android:maxLines="4" />
+
         <EditText
             android:id="@+id/salud"
+            android:background="@drawable/style_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="356dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="484dp"
             android:hint="Condicion de salud"
             android:inputType="textCapSentences|textAutoCorrect"
             android:lines="3"
@@ -124,9 +154,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="15"
+            android:textColor="@color/colorPrimary"
             android:inputType="textPersonName"
-            android:text="Agregar informacion de la persona"
-            android:textSize="23dp" />
+            android:text="Ficha medica"
+            android:textSize="25dp" />
 
 
 
@@ -138,7 +169,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@android:drawable/ic_input_add"/>
 
 
 

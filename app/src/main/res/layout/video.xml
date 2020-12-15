@@ -38,28 +38,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="50"
+            android:textColor="@color/colorPrimary"
             android:inputType="textPersonName"
             android:text="Seleccionar video"
-            android:textSize="23dp"/>
+            android:textSize="25dp"/>
 
 
         <EditText
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/style_edit_text"
             android:hint="Ruta del video"
             android:lines="3"
             android:maxLines="4" />
         <Button
             android:id="@+id/btn_videos"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="115dp"
+            android:layout_marginTop="200dp"
             android:layout_centerHorizontal="true"
             android:text="Buscar"
             android:onClick="videosave"
-            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/style_button"
             android:textColor="@color/backgroundcolor" />
 
 

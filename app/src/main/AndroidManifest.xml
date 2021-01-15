@@ -36,84 +36,110 @@
 
         <activity
             android:name="com.example.nfctocare.Dashboard"
+            android:parentActivityName="com.example.nfctocare.Dashboard"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="Instantiatable">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Dashboard"
+                ></meta-data>
 
         </activity>
 
         <activity
             android:name="com.example.nfctocare.Call"
+            android:parentActivityName="com.example.nfctocare.Dashboard"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="Instantiatable">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Call"
+                ></meta-data>
 
         </activity>
 
         <activity
             android:name="com.example.nfctocare.Url"
+            android:parentActivityName="com.example.nfctocare.Url"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="Instantiatable">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Url"
+                ></meta-data>
 
         </activity>
 
         <activity
             android:name="com.example.nfctocare.Info_text"
+            android:parentActivityName="com.example.nfctocare.Info_text"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="Instantiatable">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Info_text"
+                ></meta-data>
 
         </activity>
 
         <activity
             android:name="com.example.nfctocare.Video"
+            android:parentActivityName="com.example.nfctocare.Video"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="Instantiatable">
 
-            <intent-filter>
-                <action
-                android:name="android.intent.action.PICK"/>
-                <category
-                    android:name="android.intent.category.DEFAULT"/>
-                <category
-                    android:name="android.intent.category.OPENABLE"/>
-            </intent-filter>
 
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Video"
+                >
+
+            </meta-data>
+        </activity>
+        <activity
+            android:name="com.example.nfctocare.Audio"
+            android:parentActivityName="com.example.nfctocare.Audio"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable">
+
+
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Audio"
+                >
+
+            </meta-data>
         </activity>
 
         <activity
-            android:name="com.example.nfctocare.MainActivity"
+            android:name="com.example.nfctocare.Gps"
+            android:parentActivityName="com.example.nfctocare.Gps"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.Gps"
+                ></meta-data>
 
         </activity>
+
+
+
+
 
     </application>
 

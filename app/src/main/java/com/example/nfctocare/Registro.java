@@ -31,7 +31,7 @@ public class Registro extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+sad
             }
         });
     }

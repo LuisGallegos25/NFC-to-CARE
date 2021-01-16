@@ -1,5 +1,6 @@
 package com.example.nfctocare;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import OpenHelper.SQLite_OpenHelper;
 
@@ -31,7 +33,12 @@ public class Registro extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-sad
+                helper.abrir();
+                helper.insertarRegistro(String.valueOf(txtNombres.getText()), String.valueOf(txtUsuario.getText()),String.valueOf(txtPassword.getText()));
+                helper.cerrar();
+                Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_LONG).show();
+                Intent i = new Intent(getApplicationContext(),Login.class);
+                startActivity(i);
             }
         });
     }

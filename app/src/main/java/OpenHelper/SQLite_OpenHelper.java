@@ -1,6 +1,8 @@
 package OpenHelper;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
@@ -44,5 +46,15 @@ public class SQLite_OpenHelper  extends SQLiteOpenHelper {
         valores.put("Password",password);
 
         this.getWritableDatabase().insert("usuario", null,valores);
+    }
+
+    //METODO PARA VALIDAR SI EL USUARIO EXISTE
+    public Cursor ConsultarUsuPass(String usuario, String password) throws SQLException{
+
+        Cursor mcursor=null;
+        mcursor = this.getReadableDatabase().query("usuario",new String[]{"id_usuario","nombres","usuario","password"},"usuario like '"+usuario+"' " +
+                "and password like '"+password+"'",null,null,null,null);
+
+        return mcursor;
     }
 }

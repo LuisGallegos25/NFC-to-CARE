@@ -6,16 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <RelativeLayout
-        android:layout_height="wrap_content"
 
+    <RelativeLayout
         android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="414dp"
             android:layout_height="731dp"
-            android:src="@mipmap/ff"
+            android:src="@mipmap/splashfinal"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="-2dp"
             tools:layout_editor_absoluteY="0dp" />

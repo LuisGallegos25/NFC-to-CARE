@@ -74,11 +74,22 @@ public class Audio extends AppCompatActivity {
 
         txt_pathShow = (EditText) findViewById(R.id.content);
 
+        if (getSupportActionBar()!= null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        }
 
 
     }
 
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     public void Audiosave(View view) {
 

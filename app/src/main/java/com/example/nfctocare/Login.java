@@ -49,8 +49,7 @@ public class Login extends AppCompatActivity {
                 EditText txtPassword = (EditText)findViewById(R.id.password);
 
                 try {
-                        Cursor cursor = helper.ConsultarUsuPass
-                                (txtUsuario.getText().toString(),txtPassword.getText().toString());
+                        Cursor cursor = helper.ConsultarUsuPass(txtUsuario.getText().toString(),txtPassword.getText().toString());
                         if (cursor.getCount()>0){
                             Intent i = new Intent(getApplicationContext(),Dashboard.class);
                             startActivity(i);

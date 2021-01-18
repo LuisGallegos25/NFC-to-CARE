@@ -73,7 +73,6 @@
             android:layout_marginTop="390dp"
             android:layout_centerHorizontal="true"
             android:text="INGRESAR"
-            android:onClick="videosave"
             android:background="@drawable/style_button"
             android:textColor="@color/backgroundcolor" />
 
@@ -84,7 +83,6 @@
             android:layout_marginTop="450dp"
             android:layout_centerHorizontal="true"
             android:text="REGISTRO"
-            android:onClick="videosave"
             android:background="@drawable/style_button_red"
             android:textColor="@color/backgroundcolor" />
 

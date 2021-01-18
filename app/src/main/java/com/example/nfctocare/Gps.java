@@ -59,7 +59,11 @@ public class Gps extends AppCompatActivity {
 
             }
         });
+        if (getSupportActionBar()!= null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

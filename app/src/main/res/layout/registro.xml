@@ -65,7 +65,6 @@
             android:layout_marginTop="300dp"
             android:layout_centerHorizontal="true"
             android:text="REGISTRAR"
-            android:onClick="videosave"
             android:background="@drawable/style_button_red"
             android:textColor="@color/backgroundcolor" />
 

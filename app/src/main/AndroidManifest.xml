@@ -165,8 +165,34 @@
 
         </activity>
 
+        <activity
+            android:name="com.example.nfctocare.CallList"
+            android:parentActivityName="com.example.nfctocare.CallList"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.CallList"
+                ></meta-data>
+
+        </activity>
 
 
+        <activity
+            android:name="com.example.nfctocare.CallUpdate"
+            android:parentActivityName="com.example.nfctocare.CallUpdate"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nfctocare.CallUpdate"
+                ></meta-data>
+
+        </activity>
 
 
     </application>

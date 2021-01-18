@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="134dp"
             android:background="@drawable/style_edit_text"
-            android:hint="Ingresar telefono del contacto"
+            android:hint="Ingrese telefono del contacto"
             android:inputType="phone"
             android:lines="3"
             android:maxLines="4" />
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:ems="15"
             android:inputType="textPersonName"
-            android:text="Agregar Llamada Telefonica"
+            android:text="Modificar Llamada Telefonica"
             android:textColor="@color/colorPrimary"
             android:textSize="25sp" />
 
@@ -71,12 +71,12 @@
         android:src="@drawable/ic_baseline_add_24" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/list"
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|left"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_baseline_format_list_bulleted_24" />
+        android:src="@drawable/ic_baseline_delete_24" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
